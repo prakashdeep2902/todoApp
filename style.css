@@ -105,3 +105,8 @@ h1 {
   background: #f44336;
   color: white;
 }
+
+.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
