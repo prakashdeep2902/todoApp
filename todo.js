@@ -20,22 +20,28 @@ function addingATask(e) {
 `;
 
   TaskSpace.appendChild(li);
+
+  localStorage.setItem(value, li);
   TaskInput.value = "";
 }
 
 AddingTaskBtn.addEventListener("click", addingATask);
 
+const username = localStorage.getItem("vikash");
+
+console.log();
+
 TaskSpace.addEventListener("click", (e) => {
   const target = e.target;
 
-  // DELETE TASK
   if (target.classList.contains("delete-btn")) {
     const li = target.closest("li");
+    console.log(li);
     li.remove();
+  }
 
-    if (target.classList.contains("delete-btn")) {
-      const li = target.closest("li");
-      li.classList.toggle("completed");
-    }
+  if (target.classList.contains("complete-btn")) {
+    const li = target.closest("li");
+    li.classList.toggle("completed");
   }
 });
