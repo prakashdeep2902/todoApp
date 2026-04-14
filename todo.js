@@ -70,7 +70,6 @@ TaskSpace.addEventListener("click", (e) => {
       return { value, status };
     });
 
-    console.log("ChangedStatus::==>", ChangedStatus);
     localStorage.setItem("task", JSON.stringify(ChangedStatus));
 
     li.classList.toggle("completed");
